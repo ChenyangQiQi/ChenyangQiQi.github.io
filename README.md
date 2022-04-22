@@ -1,1 +1,1 @@
-This is the source code to Chenyang QI's public academic website: https://jonbarron.info/.
+This is the source code to Chenyang QI's public academic website: https://chenyangqiqi.github.io
