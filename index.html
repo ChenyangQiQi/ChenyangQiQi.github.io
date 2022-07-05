@@ -48,6 +48,7 @@
                   <!-- </heading> -->
                   <p>
                   </p><ul>
+                    <li>News (June 2022): One paper is accepted to ACM Multimedia 2022.</li>
                     <li>News (Mar 2022): One paper is accepted to CVPR 2022.</li>
                   </ul>
                   <p></p>
@@ -63,6 +64,43 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+    <tr onmouseout="bsvd_stop()" onmouseover="bsvd_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+            <div class="two" id="bsvd_image" style="opacity: 0;">
+                <img src="images/bsvd_start.png" width="160"></div>
+            <img src="images/bsvd_stop.png" width="160">
+            </div>
+            <script type="text/javascript">
+            function bsvd_start() {
+                document.getElementById('bsvd_image').style.opacity = "1";
+            }
+
+            function bsvd_stop() {
+                document.getElementById('bsvd_image').style.opacity = "0";
+            }
+            videodepth_stop()
+            </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>Real-time Streaming Video Denoising with Bidirectional Buffers</papertitle>
+            
+            <br>
+            <strong>Chenyang Qi*</strong>,
+            Junming Chen*, Xin Yang,
+            <a href="http://cqf.io">Qifeng Chen</a>
+            <br>
+            <em>ACM Multimedia</em>, 2022
+            <br>
+            <!-- <a href="https://arxiv.org/pdf/2112.11377.pdf">arxiv</a> /  -->
+            <!-- <a href="https://github.com/ChenyangLEI/sfp-wild">code</a> /  -->
+            <!-- <a href="https://chenyanglei.github.io/sfpwild/index.html">project page</a> -->
+            <a href="">Coming Soon</a>
+
+            <p></p>
+            <p>An extremely efficient (700X speedup) buffer-based framework for online video denoising.  </p>
+        </td>
 
     <tr onmouseout="sfp_stop()" onmouseover="sfp_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
@@ -102,8 +140,6 @@
             <p></p>
             <p>Scene-level normal estimation from a single polarization image using physics-based priors. </p>
         </td>
-
-
 
         </tbody></table>
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
