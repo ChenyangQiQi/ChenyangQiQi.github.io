@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>BSVD</title>
+    <meta name="author" content="Chenyang Qi">
+    <meta name="description" content="Project page of our paper">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="eccv_logo.png">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Real-time Streaming Video Denoising with Bidirectional Buffers <br /> 
+      
+                <small>
+                    
+                </small>
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://chenyangqiqi.github.io/">
+                            Chenyang Qi*
+                        </a>
+                        <br /> HKUST 
+                    </li>
+
+                                      <li>
+                        <a href="https://chenjunming.ml/">
+                            Junming Chen*
+                        </a>
+                        <br /> HKUST
+                    </li>
+                  
+
+                                      <li>
+                        <a href="">
+                            Xin Yang
+                        </a>
+                        <br /> HKUST
+                    </li>
+                  
+                    <li>
+                        <a href="https://cqf.io/">
+                            Qifeng Chen
+                      </a>
+                        <br />HKUST
+                    </li>
+                               
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2207.06937">
+                            <img src="./images/slide_icon.jpg" height="60px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+              
+                        <li>
+                            <a href="https://github.com/ChenyangQiQi/BSVD">
+                            <img src="./images/github_icon.jpg" height="60px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=aad9Ry8Ayw0">
+                            <img src="./images/youtube_icon.jpg" height="60px"><br>
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>                      
+                    </ul>
+                </div>
+        </div>
+
+
+      
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Performance Comparison.
+                </h3>
+
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        
+                        <iframe width="200" height="200" src="https://www.youtube.com/embed/4RkqF2VMjnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <br>
+                        
+                        </a>
+                    </li>
+          
+                    <li>
+                        
+                        <img src="./images/teaser.jpg" class="img-responsive" alt="samples" class="center"><br>
+                        
+                        </a>
+                    </li>
+
+                </ul>
+                  
+                  
+                  
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Poster Video
+                </h3>
+            </div>
+            <div class="col-12 text-center">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/4RkqF2VMjnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aad9Ry8Ayw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                Video streams are delivered continuously to save the cost of storage
+                and device memory. Real-time denoising algorithms are typically
+                adopted on the user device to remove the noise involved during
+                the shooting and transmission of video streams. However, sliding-window-based
+                methods feed multiple input frames for a single
+                output and lack computation efficiency. Recent multi-output inference
+                works propagate the bidirectional temporal feature with
+                a parallel or recurrent framework, which either suffers from performance
+                drops on the temporal edges of clips or can not achieve
+                online inference. In this paper, we propose a Bidirectional Streaming Video Denoising (BSVD) framework, to achieve high-fidelity
+                real-time denoising for streaming videos with both past and future
+                temporal receptive fields. The bidirectional temporal fusion
+                for online inference is considered not applicable in the MoViNet.
+                However, we introduce a novel Bidirectional Buffer Block as the
+                core module of our BSVD, which makes it possible during our
+                pipeline-style inference. 
+                In addition, our method is concise and flexible to be utilized in both non-blind and blind video denoising. 
+                We compare our model with various state-of-the-art video denoising
+                models qualitatively and quantitatively on synthetic and real noise.
+                Our method outperforms previous methods in terms of restoration fidelity and runtime.
+                </p>
+            </div>
+        </div>
+
+
+
+        
+          <!-- ##### Architecture #####-->
+        <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Approach 
+            </h3>
+            
+            <p class="text-justify">
+                <!-- The forward operation of $l$\ts{th} Bidirectional Buffer Block at time step $i$. 
+                This block aggregates input feature $Z^{i-l,l}$ with buffered features $B^{-1,l}, B^{0,l}$, to output $Z^{i-l-1, l+1}$, which is the input for the $(l+1)$\ts{th} temporal buffer block. 
+                After convolution operation, the buffered feature are updated using input $Z^{i-l,l}$. -->
+                The forward operation of Bidirectional Buffer Block at time step i. 
+                <!-- This block aggregates input feature with buffered features $B^{-1,l}, B^{0,l}$, to output $Z^{i-l-1, l+1}$, which is the input for the $(l+1)$\ts{th} temporal buffer block. 
+                After convolution operation, the buffered feature are updated using input $Z^{i-l,l}$. -->
+            </p>
+            <img src="./images/method_block.png" class="img-responsive" alt="method" class="center"><br>
+            <p class="text-justify">
+                An overview of our framework. 
+                <!-- The backbone of our network is two light-weight U-Nets~\cite{Ronneberger2015U-Net} with temporal fusion operation inserted between convolution layers. 
+                At time step $i$ during inference, one noisy frame $x_i$ and its noise map are fed into the neural network. 
+                Then, our network outputs another clean frame $y_{i-N}$. -->
+                <!-- An overview of our framework. 
+                The backbone of our network is two light-weight U-Nets~\cite{Ronneberger2015U-Net} with temporal fusion operation inserted between convolution layers. 
+                At time step $i$ during inference, one noisy frame $x_i$ and its noise map are fed into the neural network. 
+                Then, our network outputs another clean frame $y_{i-N}$. -->
+            </p>
+                <img src="./images/method_framework.png" class="img-responsive" alt="method" class="center"><br>
+
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Analysis 
+            </h3>
+            
+
+            <p class="text-justify">
+                The comparison of computation graph and complexity for different methods.
+                <!-- For an input clip with length $T_{clip}$, we assume all methods use same $N$ convolution blocks for temporal fusion. 
+                \textcolor{blue}{Blue}, \textcolor{teal}{green}, and \textcolor{red}{red} features represent the past, present, and future features from three adjacent frames.
+                Solid features are cached in the GPU memory, while dotted features have been deleted.
+                Compared with sliding-window methods (a), our inference time is shorter.
+                For unidirectional-RNN (b), our framework utilize bidirectional temporal fusion, and achieve better fidelity. 
+                In addition, bidirectional-RNN (c) and MIMO (d) framework suffer from $O(T_{clip})$ memory and fidelity degradation on the clip edges, which is solved in our inference framework. -->
+                <!-- \caption{\textbf{The comparison of computation graph and complexity for different methods.} 
+                For an input clip with length $T_{clip}$, we assume all methods use same $N$ convolution blocks for temporal fusion. 
+                \textcolor{blue}{Blue}, \textcolor{teal}{green}, and \textcolor{red}{red} features represent the past, present, and future features from three adjacent frames.
+                Solid features are cached in the GPU memory, while dotted features have been deleted.
+                Compared with sliding-window methods (a), our inference time is shorter.
+                For unidirectional-RNN (b), our framework utilize bidirectional temporal fusion, and achieve better fidelity. 
+                In addition, bidirectional-RNN (c) and MIMO (d) framework suffer from $O(T_{clip})$ memory and fidelity degradation on the clip edges, which is solved in our inference framework. -->
+            </p>
+            <img src="./images/comparison_comp_graph.png" class="img-responsive" alt="method" class="center"><br>
+        </div>
+        </div>
+
+
+
+        
+
+      
+      
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Quantitative Results
+                </h3>
+            </div>  
+            <!-- <div class="col-12 text-center"></div> -->
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    Performance comparison Visualization on on DAVIS test set with noise level 𝜎 = 50
+                </p>
+            </div>
+            
+            <div class="col-4 text-center">
+                <!-- <img src="./images/teaser.jpg" class="img-responsive" alt="samples" class="center" width="400"><br> -->
+                <!-- <img src="./images/teaser.jpg" alt="Paris" class="center" width="400"> -->
+                <img src="./images/teaser.jpg" alt="samples" class="center" width="400">
+                <!-- <img src="./images/teaser.jpg" class="img-responsive" alt="samples" class="center" width="400"><br> -->
+                <p class="text-justify"></p>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                
+                Quantitative comparisons of PSNR (dB) and runtime on the test set of DAVIS and Set8 for gaussian denoising. 
+                <!-- C and G represent CPU and GPU time cost, respectively. $10, 20, 30, 40, 50$ represents the $\sigma$ of test data.  -->
+                <!-- We show the averaged inference time per frame with the resolution of 960 $\times$ 540 in PyTorch framework with FP16 precision. Our method outperforms previous methods on average PSNR and runtime. -->
+                <!-- Quantitative comparisons of PSNR (dB) and runtime on the test set of DAVIS and Set8. C and G represent CPU and GPU time cost, respectively. $10, 20, 30, 40, 50$ represents the $\sigma$ of test data. 
+                We show the averaged inference time per frame with the resolution of 960 $\times$ 540 in PyTorch framework with FP16 precision. Our method outperforms previous methods on average PSNR and runtime. -->
+                </p>
+            
+                <img src="./images/result_davis_set8.png" class="img-responsive" alt="edit" class="center"><br> 
+
+                <!-- </div> -->
+                <p class="text-justify">
+                    Quantitative comparisons of PSNR for blind denoising.
+                </p>
+                <img src="./images/result_blind.png" class="img-responsive" alt="edit" class="center"><br> 
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    Quantitative comparisons of PSNR and SSIM on the CRVD test set for raw image denosing.
+                    <!-- We test the averaged computation cost per frame on RGGB raw data with resolution $960\times540$. -->
+                </p>
+            </div>
+            <div class="col-4 text-center">
+                <!-- <img src="./images/teaser.jpg" alt="samples" class="center" width="400"> -->
+                <img src="./images/result_raw.png" alt="samples" class="center" width="400">
+                <!-- <img src="./images/result_raw.png" alt="edit" class="center" width="400" height="220"><br>  -->
+            </div>
+        </div>   
+      
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                Qualitative Results
+              </h3>
+              
+            <img src="./images/set8_0408-1.jpg" class="img-responsive" alt="edit" class="center"><br>
+            
+            <img src="./images/crvd_0408-1.jpg" class="img-responsive" alt="edit" class="center"><br>
+
+          </div>
+        </div>         
+        
+        <!-- ##### BibTex #####-->
+        <hr>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+ 
+                <div class="row align-items-center">
+                    <div class="col py-3">
+                        <pre class="border">
+                        
+    @inproceedings{qi2022BSVD,
+        title={Real-time Streaming Video Denoising with Bidirectional Buffers},
+        author={Chenyang Qi and Junming Chen and Xin Yang and Qifeng Chen},
+        booktitle = {ACM MM},
+        year={2022}
+        }
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
