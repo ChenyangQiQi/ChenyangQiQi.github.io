@@ -90,10 +90,12 @@
             <source src="images/fatezero_van_gogh.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
+            <!-- <div class="two" id='fatezero_image_input'> -->
             <video  width=100% height=100% muted autoplay loop>
               <source src="images/fatezero_sunflower.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>
+            <!-- </div> -->
           </div>
           <script type="text/javascript">
             function fatezero_start() {
@@ -133,6 +135,49 @@
               (e.g., add van gogh style to the left sunflower video)</p>
             
         </td>
+        <tr onmouseout="hyperthumbnail_stop()" onmouseover="hyperthumbnail_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+              <div class="two" id="hyperthumbnail_image" style="opacity: 0;">
+                  <img src="images/hyperthumbnail_rate_distortion.png" width="180"></div>
+              <img src="images/hyperthumbnail_rate_distortion.png" width="180">
+              </div>
+              <script type="text/javascript">
+              function hyperthumbnail_start() {
+                  document.getElementById('hyperthumbnail_image').style.opacity = "1";
+              }
+  
+              function hyperthumbnail_stop() {
+                  document.getElementById('hyperthumbnail_image').style.opacity = "0";
+              }
+              videodepth_stop()
+              </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>Hyperthumbnail: Real-time 6K Image Rescaling with Rate-distortion Optimization</papertitle>
+              
+              <br> 
+              <strong>Chenyang Qi,</strong>*
+              Xin Yang, 
+              <a href="https://felixcheng97.github.io/">Ka Leong Cheng,</a>
+              <a href="https://www.yingcong.me/">Ying-Cong Chen,</a>
+              
+              
+              <a href="http://cqf.io">Qifeng Chen</a>
+              <br>
+              <em>CVPR</em>, 2023
+              <br>
+  
+              <a> Details are coming soon</a>
+              <!-- <a href="https://arxiv.org/abs/2207.06937">arxiv</a> /  -->
+              <!-- <a href="https://github.com/ChenyangQiQi/hyperthumbnail">code</a> /  -->
+              <!-- <a href="https://chenyangqiqi.github.io/hyperthumbnail/index.html">project page</a> -->
+              <!-- <a href="">Coming Soon</a> -->
+  
+              <p></p>
+              <p>Image upscaling with learnable frequncy-domain quantization to achieve 6K real time speed and best
+                rate-distortion. </p>
+          </td>
 
     <tr onmouseout="portrait_stop()" onmouseover="portrait_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
@@ -204,49 +249,7 @@
             <p>Identity-preserving talking head generation utilizing dense landmarks and spatial-
               temporal enhancement with GAN priors.  </p>
         </td>
-    <tr onmouseout="hyperthumbnail_stop()" onmouseover="hyperthumbnail_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-            <div class="two" id="hyperthumbnail_image" style="opacity: 0;">
-                <img src="images/hyperthumbnail_rate_distortion.png" width="160"></div>
-            <img src="images/hyperthumbnail_rate_distortion.png" width="160">
-            </div>
-            <script type="text/javascript">
-            function hyperthumbnail_start() {
-                document.getElementById('hyperthumbnail_image').style.opacity = "1";
-            }
 
-            function hyperthumbnail_stop() {
-                document.getElementById('hyperthumbnail_image').style.opacity = "0";
-            }
-            videodepth_stop()
-            </script>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-            <papertitle>Hyperthumbnail: Real-time 6K Image Rescaling with Rate-distortion Optimization</papertitle>
-            
-            <br> 
-            <strong>Chenyang Qi,</strong>*
-            Xin Yang, 
-            <a href="https://felixcheng97.github.io/">Ka Leong Cheng,</a>
-            <a href="https://www.yingcong.me/">Ying-Cong Chen,</a>
-            
-            
-            <a href="http://cqf.io">Qifeng Chen</a>
-            <br>
-            <em>CVPR</em>, 2023
-            <br>
-
-            <a> Details are coming soon</a>
-            <!-- <a href="https://arxiv.org/abs/2207.06937">arxiv</a> /  -->
-            <!-- <a href="https://github.com/ChenyangQiQi/hyperthumbnail">code</a> /  -->
-            <!-- <a href="https://chenyangqiqi.github.io/hyperthumbnail/index.html">project page</a> -->
-            <!-- <a href="">Coming Soon</a> -->
-
-            <p></p>
-            <p>Image upscaling with learnable frequncy-domain quantization to achieve 6K real time speed and best
-              rate-distortion. </p>
-        </td>
     <tr onmouseout="bsvd_stop()" onmouseover="bsvd_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
             <div class="one">
