@@ -137,19 +137,22 @@
             
         </td>
         <tr onmouseout="hyperthumbnail_stop()" onmouseover="hyperthumbnail_start()">
-          <td style="padding:20px;width:25%;vertical-align:middle">
+          <td style="padding:0px;width:25%;vertical-align:bottom">
               <div class="one">
               <div class="two" id="hyperthumbnail_image" style="opacity: 0;">
-                  <img src="images/hyperthumbnail_rate_distortion.png" width="180"></div>
-              <img src="images/hyperthumbnail_rate_distortion.png" width="180">
+                  <img src="images/hyperthumbnail/hyperthumbnail_rate_distortion.png" width="230"></div>
+              <div class="two" id="hyperthumbnail_input" style="opacity: 1;">
+              <img src="images/hyperthumbnail/hyper_framework.png" width="250"></div>
               </div>
               <script type="text/javascript">
               function hyperthumbnail_start() {
                   document.getElementById('hyperthumbnail_image').style.opacity = "1";
+                  document.getElementById('hyperthumbnail_input').style.opacity = "0";
               }
   
               function hyperthumbnail_stop() {
                   document.getElementById('hyperthumbnail_image').style.opacity = "0";
+                  document.getElementById('hyperthumbnail_input').style.opacity = "1";
               }
               videodepth_stop()
               </script>
@@ -337,7 +340,7 @@
             
           </tr>
         </tbody></table> -->
-
+          
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
@@ -347,26 +350,26 @@
 
               <!-- <tr onmouseout="hyperthumbnail_stop()" onmouseover="hyperthumbnail_start()"> -->
                 <tr>
-                  <td style="padding:00px;width:25%;vertical-align:middle">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
                       <div class="one">
                       <!-- <div class="two" id="hyperthumbnail_image" style="opacity: 0;">
                           <img src="images/tencent.png" width="160"></div> -->
                       <img src="images/tencent.png" width="180">
                       </div>
                   </td>
-                  <td style="padding:00px;width:75%;vertical-align:top">
+                  <td style="padding:20px;width:75%;vertical-align:top">
                       <papertitle>Research Intern, Tencent AI Lab</papertitle>
                       <br> Jan, 2023 - Present
                   </td>
                 <tr>
-                  <td style="padding:00px;width:25%;vertical-align:middle">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
                       <div class="one">
                       <!-- <div class="two" id="hyperthumbnail_image" style="opacity: 0;">
                           <img src="images/tencent.png" width="160"></div> -->
                       <img src="images/microsoft.png" width="180">
                       </div>
                   </td>
-                  <td style="padding:0px;width:75%;vertical-align: top">
+                  <td style="padding:20px;width:75%;vertical-align: top">
                       <papertitle>Research Intern, Microsoft Research Asia</papertitle>
                       <br> June, 2022 - December, 2022
                   </td>
