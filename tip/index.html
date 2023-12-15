@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="TIP: Text-Driven Image Processing with Semantic and Restoration Instructions"/>
+  <meta property="og:description" content="TIP: Text-Driven Image Processing with Semantic and Restoration Instructions"/>
+  <meta property="og:url" content="https://fate-zero-edit.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/framework.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>TIP</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+
+  <script src="static/js/index.js"></script>
+  
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <!-- <div class="container is-max-desktop"> -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="xtitle is-1 publication-title">
+              TIP: Text-Driven Image Processing with Semantic and Restoration Instructions           
+            </h1> 
+            <div class="is-size-5 publication-authors">
+              <!-- ICCV 2023 Oral Presentation -->
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span> -->
+            </div>
+          </br>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://chenyangqiqi.github.io/" target="_blank">Chenyang Qi</a><sup>1,2</sup></span>
+                <!-- <span class="author-block">
+                  <a href="http://vinthony.github.io/" target="_blank">Xiaodong Cun</a><sup>2</sup></span>
+                  <span class="author-block">
+                    <a href="https://yzhang2016.github.io" target="_blank">Yong Zhang</a><sup>2</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://chenyanglei.github.io/" target="_blank">Chenyang Lei</a><sup>3</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://xinntao.github.io/" target="_blank">Xintao Wang</a><sup>2</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=4oXBp9UAAAAJ" target="_blank">Ying Shan</a><sup>2</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://cqf.io/" target="_blank">Qifeng Chen</a><sup>1</sup> -->
+                  <!-- </span> -->
+
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=9ajdZaEAAAAJ&hl=zh-TW" target="_blank">Zhengzhong Tu</a><sup>1</sup></span>
+                  <span class="author-block">
+                    <a href="https://people.cs.pitt.edu/~yekeren/" target="_blank">Keren Ye</a><sup>1</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://mdelbra.github.io/" target="_blank">Mauricio Delbracio</a><sup>1</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://sites.google.com/view/milanfarhome/" target="_blank">Peyman Milanfar</a><sup>1</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://cqf.io/" target="_blank">Qifeng Chen</a><sup>2</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=en&user=UOX9BigAAAAJ" target="_blank">Hossein Talebi</a><sup>1</sup>
+                  </span>
+                  </div>
+                
+              </br>
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                    <sup>1</sup> Google Research &nbsp;&nbsp;&nbsp;
+                    <sup>2</sup> HKUST &nbsp;&nbsp;&nbsp;
+                    <!-- <sup>3</sup> CAIR, CAS </span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered"> 
+                    <div class="publication-links">
+                      
+                       <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <!-- <a href="https://arxiv.org/abs/2303.09535" target="_blank" -->
+                    <!-- <a href="https://arxiv.org/abs/2303.09535" target="_blank" class="external-link "> -->
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (coming) </span>
+                  </a>
+                </span> 
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <!-- <a href="https://github.com/ChenyangQiQi/FateZero" target="_blank" class="external-link "> -->
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming) </span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="https://hkustconnect-my.sharepoint.com/:v:/g/personal/cqiaa_connect_ust_hk/EXKDI_nahEhKtiYPvvyU9SkBDTG2W4G1AZ_vkC7ekh3ENw?e=ficp9t" target="_blank"
+                  class="external-link ">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/spaces/chenyangqi/FateZero"  target="_blank"
+                   class="external-link">
+                  <span class="icon">
+                    <img src="./static/images/hf_black.png">
+                  </span>
+                  <span>Demo</span>
+                  </a> -->
+                  <!-- <span class="link-block">
+                    <a href="https://huggingface.co/spaces/PAIR/Text2Video-Zero"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <img src="./static/images/hf.png" alt="Button Image">
+                      </span>
+                      <span>Demo</span>
+                      </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <p class="trdl">TL;DR: Restore your degraded image via prompting target semantic and restoration instructions.</p>
+
+  <div class="container is-max-desktop">
+    <div class="hero-body-img">
+      <!-- <div class="hero-body-pdf"> -->
+
+      <img src="./static/images/TIP_Teaser_Figure_three_rows_1128_1813.png" width="100%">
+    </div>
+
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths"> -->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            The diffusion-based generative models have achieved remarkable success in text-based image generation. 
+            However, since it contains enormous randomness in generation progress, it is still challenging to apply such models for real-world visual content editing, especially in videos. 
+In this paper, we propose <i style="color: #eb002a">FateZero</i>, a zero-shot text-based editing method on real-world videos without per-prompt training or use-specific mask. 
+To edit videos consistently, we propose several techniques based on the pre-trained models. Firstly, in contrast to the straightforward DDIM inversion technique, our approach captures intermediate attention maps during inversion using source prompt<sup>1</sup>, which effectively retain both structural and motion information. These maps are directly fused in the editing process rather than generated during denoising. To further minimize semantic leakage of the source video, we then fuse self-attentions with a blending mask obtained by cross-attention features from the source prompt. Furthermore, we have implemented a reform of the self-attention mechanism in denoising UNet by introducing spatial-temporal attention to ensure frame consistency.
+Yet succinct, our method is the first one to show the ability of zero-shot text-driven video style and local attribute editing from the trained text-to-image model. We also have a better zero-shot shape-aware editing ability based on the <a href="https://tuneavideo.github.io/">One-shot text-to-video model</a>. Extensive experiments demonstrate our superior temporal consistency and editing capability than previous works.
+          </p> -->
+          <p>
+
+          Text-driven diffusion models have become increasingly popular for various image editing tasks, including inpainting, stylization, and object replacement. 
+However, it still remains an open research problem to adopt this language-vision paradigm for more fine-level image processing tasks, such as denoising, super-resolution, deblurring, and compression artifact removal. 
+</br> </br> In this paper, we develop <b>TIP</b>, a Text-driven Image Processing framework that leverages natural language as a user-friendly interface to control the image restoration process. We consider the capacity of text information in two dimensions. 
+<!-- </br> </br> -->
+First, we use content-related prompts to enhance the semantic alignment, effectively alleviating identity ambiguity in the restoration outcomes.
+<!-- </br> -->
+Second, our approach is the first framework that supports fine-level instruction through language-based quantitative specification of the restoration strength, without the need for explicit task-specific design.
+</br> </br>
+In addition, we introduce a novel fusion mechanism that augments the existing ControlNet architecture by learning to rescale the generative prior, thereby achieving better restoration fidelity. 
+Our extensive experiments demonstrate the superior restoration performance of TIP compared to the state of the arts, alongside offering the flexibility of text-based control over the restoration effects.
+          </p>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-2">Pipeline</h2>
+        <!-- <div class="content has-text-justified">
+          <img src="static/images/pipeline.gif" />
+        </div> -->
+        <div class="hero-body-img">
+          <!-- <div class="hero-body-pdf"> -->
+    
+          <img src="./static/images/method_framework _1116_1110.png" width="100%">
+        </div>
+
+        <p class="content has-text-justified">
+         <!-- <b>Left, Pipeline</b>: we store all the attention maps in the DDIM inversion pipeline.
+         At the editing stage of the DDIM denoising, we then fuse the attention maps with the stored attention maps using the proposed Attention Blending Block. 
+         <br/><br/><b>Right, Attention Blending Block</b>: First, we replace the cross-attention maps of un-edited words~(e.g., road and countryside) with their maps using the source prompt during inversion. As for the edited words (e.g., posche car), we blend the self-attention maps during inversion and editing with an adaptive spatial mask obtained from cross-attention, which represents the areas that the user wants to edit. 
+         -->
+         In the <b>training phase</b>, we begin by synthesizing a degraded version $y$, of a clean image $x$. Our degradation synthesis pipeline also creates a restoration prompt ${c}_r$ , which contains numeric parameters that reflects the intensity of the degradation introduced.
+   Then, we inject the synthetic restoration prompt into a ControlNet adaptor, which uses our proposed modulation fusion blocks ($\gamma$, $\beta$) to connect with the frozen backbone driven by the semantic prompt ${c}_s$. 
+   
+   <br/><br/>During <b>test time</b>, the users can employ the TIP framework as either a blind restoration model with restoration prompt $\textit{``Remove all degradation''}$ and empty semantic prompt $\varnothing$, or manually adjust the restoration ${c}_r$ and semantic prompts ${c}_s$ to obtain what they ask for.
+        
+        
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+<!-- Image carousel -->
+
+
+
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-2">Restoration Prompting</h2>
+        <!-- <div class="content has-text-justified">
+          <img src="static/images/pipeline.gif" />
+        </div> -->
+        <div class="hero-body-img">
+          <!-- <div class="hero-body-pdf"> -->
+    
+          <img src="static/images/restoration_prompting_1row.png" width="100%">
+        </div>
+
+        <p class="content has-text-justified">
+         <!-- <b>Left, Pipeline</b>: we store all the attention maps in the DDIM inversion pipeline.
+         At the editing stage of the DDIM denoising, we then fuse the attention maps with the stored attention maps using the proposed Attention Blending Block. 
+         <br/><br/><b>Right, Attention Blending Block</b>: First, we replace the cross-attention maps of un-edited words~(e.g., road and countryside) with their maps using the source prompt during inversion. As for the edited words (e.g., posche car), we blend the self-attention maps during inversion and editing with an adaptive spatial mask obtained from cross-attention, which represents the areas that the user wants to edit. 
+         -->
+        <b>Test-time semantic prompting</b>. Our framework restores degraded images guided by flexible semantic prompts, while unrelated background elements and global tones remain aligned with the degraded input conditioning.  
+        
+        </p>
+        <div class="hero-body-img">
+          <!-- <div class="hero-body-pdf"> -->
+    
+          <img src="static/images/prompt_space_walking.png" width="80%">
+        </div>
+        <br> <br/>
+        <p class="content has-text-justified">
+         <!-- <b>Left, Pipeline</b>: we store all the attention maps in the DDIM inversion pipeline.
+         At the editing stage of the DDIM denoising, we then fuse the attention maps with the stored attention maps using the proposed Attention Blending Block. 
+         <br/><br/><b>Right, Attention Blending Block</b>: First, we replace the cross-attention maps of un-edited words~(e.g., road and countryside) with their maps using the source prompt during inversion. As for the edited words (e.g., posche car), we blend the self-attention maps during inversion and editing with an adaptive spatial mask obtained from cross-attention, which represents the areas that the user wants to edit. 
+         -->
+         <b>Prompt space walking visualization</b> for the restoration prompt. 
+         Our method can decouple the restoration direction and strength via only natural language prompting.         
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-2">Semantic Prompting</h2>
+        <!-- <div class="content has-text-justified">
+          <img src="static/images/pipeline.gif" />
+        </div> -->
+        <div class="hero-body-img">
+          <!-- <div class="hero-body-pdf"> -->
+    
+          <img src="./static/images/semantic_prompting.png" width="100%">
+        </div>
+
+        <p class="content has-text-justified">
+         <!-- <b>Left, Pipeline</b>: we store all the attention maps in the DDIM inversion pipeline.
+         At the editing stage of the DDIM denoising, we then fuse the attention maps with the stored attention maps using the proposed Attention Blending Block. 
+         <br/><br/><b>Right, Attention Blending Block</b>: First, we replace the cross-attention maps of un-edited words~(e.g., road and countryside) with their maps using the source prompt during inversion. As for the edited words (e.g., posche car), we blend the self-attention maps during inversion and editing with an adaptive spatial mask obtained from cross-attention, which represents the areas that the user wants to edit. 
+         -->
+        <b>Test-time semantic prompting</b>. Our framework restores degraded images guided by flexible semantic prompts, while unrelated background elements and global tones remain aligned with the degraded input conditioning.  
+        
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-2">Baseline Comparison</h2>
+        <!-- <div class="content has-text-justified">
+          <img src="static/images/pipeline.gif" />
+        </div> -->
+        <div class="hero-body-img">
+          <!-- <div class="hero-body-pdf"> -->
+    
+          <img src="static/images/result_comparison.png" width="100%">
+        </div>
+
+        <p class="content has-text-justified">
+         <!-- <b>Left, Pipeline</b>: we store all the attention maps in the DDIM inversion pipeline.
+         At the editing stage of the DDIM denoising, we then fuse the attention maps with the stored attention maps using the proposed Attention Blending Block. 
+         <br/><br/><b>Right, Attention Blending Block</b>: First, we replace the cross-attention maps of un-edited words~(e.g., road and countryside) with their maps using the source prompt during inversion. As for the edited words (e.g., posche car), we blend the self-attention maps during inversion and editing with an adaptive spatial mask obtained from cross-attention, which represents the areas that the user wants to edit. 
+         -->
+        <!-- <b>Test-time semantic prompting</b>. Our framework restores degraded images guided by flexible semantic prompts, while unrelated background elements and global tones remain aligned with the degraded input conditioning.   -->
+        
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{qi2023tip,
+        title={TIP: Text-Driven Image Processing with Semantic and Restoration Instructions}, 
+        author={Chenyang Qi and Zhengzhong Tu and Keren Ye and Mauricio Delbracio and Peyman Milanfar and Qifeng Chen and Hossein Talebi},
+        year={2023},
+        <!-- journal={arXiv:2303.09535}, -->
+}
+  </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+<section class="section">
+  <div class="hero-body">
+    <div class="container is-max-desktop content">
+
+      <!-- <h2 class="title">Explanation</h2>
+    <small>1. For better visualization, we only show the edited word in this page. Please check our paper and code for the whole source prompt. </small> <br/>
+    <small>2. Most of the results are directly edited from <a href="https://github.com/vinthony/deep-blind-watermark-removal">Stable diffusion v1.4</a>. We use one-shot video diffusion model (<a href="https://tuneavideo.github.io/">Tune-A-Video</a>) checkpoints for shape-aware editing, whose results are marked as *. </small> <br/>
+    <small>3. Our method does not require training a Tune-A-Video Model. </small> -->
+
+    <h2 class="title">Acknowledgement</h2>
+    <small> We are grateful to Kelvin Chan and David Salesin for their valuable feedback. 
+      We also extend our gratitude to Shlomi Fruchter, Kevin Murphy, Mohammad Babaeizadeh, and Han Zhang for their instrumental contributions in facilitating the initial implementation of the latent diffusion model.
+
+       </small>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+            You are free to borrow this website. We just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
