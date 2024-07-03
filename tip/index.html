@@ -5,11 +5,11 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="TIP: Text-Driven Image Processing with Semantic and Restoration Instructions"/>
-  <meta property="og:description" content="TIP: Text-Driven Image Processing with Semantic and Restoration Instructions"/>
-  <meta property="og:url" content="https://fate-zero-edit.github.io/"/>
+  <meta property="og:title" content="SPIRE: Semantic Prompt-Driven Image Restoration"/>
+  <meta property="og:description" content="SPIRE: Semantic Prompt-Driven Image Restoration"/>
+  <!-- <meta property="og:url" content="https://fate-zero-edit.github.io/"/> -->
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/images/framework.png" />
+  <meta property="og:image" content="static/images/TIP_Teaser_Figure_three_rows_1128_1813.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>TIP</title>
+  <title>SPIRE</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -65,8 +65,16 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="xtitle is-1 publication-title">
-              TIP: Text-Driven Image Processing with Semantic and Restoration Instructions           
+              SPIRE: Semantic Prompt-Driven Image Restoration          
             </h1> 
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+             ECCV 2024 &nbsp;&nbsp;&nbsp;
+              <!-- <sup>3</sup> CAIR, CAS </span> -->
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span> -->
+            </div>
+
             <div class="is-size-5 publication-authors">
               <!-- ICCV 2023 Oral Presentation -->
               <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span> -->
@@ -121,15 +129,14 @@
                   </a>
                 </span> 
 
-                  <!-- Github link -->
+                  <!-- Github link
                   <span class="link-block">
-                    <!-- <a href="https://github.com/ChenyangQiQi/FateZero" target="_blank" class="external-link "> -->
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code (coming) </span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- Github link -->
                 <!-- <span class="link-block">
@@ -197,16 +204,27 @@ Yet succinct, our method is the first one to show the ability of zero-shot text-
           </p> -->
           <p>
 
-          Text-driven diffusion models have become increasingly popular for various image editing tasks, including inpainting, stylization, and object replacement. 
+          <!-- Text-driven diffusion models have become increasingly popular for various image editing tasks, including inpainting, stylization, and object replacement. 
 However, it still remains an open research problem to adopt this language-vision paradigm for more fine-level image processing tasks, such as denoising, super-resolution, deblurring, and compression artifact removal. 
 </br> </br> In this paper, we develop <b>TIP</b>, a Text-driven Image Processing framework that leverages natural language as a user-friendly interface to control the image restoration process. We consider the capacity of text information in two dimensions. 
-<!-- </br> </br> -->
-First, we use content-related prompts to enhance the semantic alignment, effectively alleviating identity ambiguity in the restoration outcomes.
+</br> </br> -->
+<!-- First, we use content-related prompts to enhance the semantic alignment, effectively alleviating identity ambiguity in the restoration outcomes. -->
 <!-- </br> -->
+<!-- Second, our approach is the first framework that supports fine-level instruction through language-based quantitative specification of the restoration strength, without the need for explicit task-specific design. -->
+<!-- </br> </br> -->
+<!-- In addition, we introduce a novel fusion mechanism that augments the existing ControlNet architecture by learning to rescale the generative prior, thereby achieving better restoration fidelity.  -->
+<!-- Our extensive experiments demonstrate the superior restoration performance of TIP compared to the state of the arts, alongside offering the flexibility of text-based control over the restoration effects. -->
+
+
+Text-driven diffusion models have become increasingly popular for various image editing tasks, including inpainting, stylization, and object replacement. 
+However, it still remains an open research problem to adopt this language-vision paradigm for more fine-level image processing tasks, such as denoising, super-resolution, deblurring, and compression artifact removal. 
+In this paper, we develop <b>SPIRE</b>, a Semantic and restoration Prompt-driven Image Restoration framework that leverages natural language as a user-friendly interface to control the image restoration process. We consider the capacity of prompt information in two dimensions. 
+</br>
+First, we use content-related prompts to enhance the semantic alignment, effectively alleviating identity ambiguity in the restoration outcomes.
+</br>
 Second, our approach is the first framework that supports fine-level instruction through language-based quantitative specification of the restoration strength, without the need for explicit task-specific design.
-</br> </br>
 In addition, we introduce a novel fusion mechanism that augments the existing ControlNet architecture by learning to rescale the generative prior, thereby achieving better restoration fidelity. 
-Our extensive experiments demonstrate the superior restoration performance of TIP compared to the state of the arts, alongside offering the flexibility of text-based control over the restoration effects.
+Our extensive experiments demonstrate the superior restoration performance of SPIRE compared to the state of the arts, alongside offering the flexibility of text-based control over the restoration effects.
           </p>
         
         </div>
@@ -240,7 +258,7 @@ Our extensive experiments demonstrate the superior restoration performance of TI
          In the <b>training phase</b>, we begin by synthesizing a degraded version $y$, of a clean image $x$. Our degradation synthesis pipeline also creates a restoration prompt ${c}_r$ , which contains numeric parameters that reflects the intensity of the degradation introduced.
    Then, we inject the synthetic restoration prompt into a ControlNet adaptor, which uses our proposed modulation fusion blocks ($\gamma$, $\beta$) to connect with the frozen backbone driven by the semantic prompt ${c}_s$. 
    
-   <br/><br/>During <b>test time</b>, the users can employ the TIP framework as either a blind restoration model with restoration prompt $\textit{``Remove all degradation''}$ and empty semantic prompt $\varnothing$, or manually adjust the restoration ${c}_r$ and semantic prompts ${c}_s$ to obtain what they ask for.
+   <br/><br/>During <b>test time</b>, the users can employ the SPIRE framework as either a blind restoration model with restoration prompt $\textit{``Remove all degradation''}$ and empty semantic prompt $\varnothing$, or manually adjust the restoration ${c}_r$ and semantic prompts ${c}_s$ to obtain what they ask for.
         
         
         </p>
