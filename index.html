@@ -20,16 +20,16 @@
               <p style="text-align:center">
                 <name>Chenyang Qi, 戚晨洋</name>
               </p>
-              <p>I am a Research Scientist at Google, working on the <a href="https://deepmind.google/models/veo/">Veo</a> project. Currently, I am focusing on real-time, interactive, high-resolution video generation.</p>
+              <p>I am a Research Scientist at Google, working on the <a href="https://deepmind.google/models/veo/">Veo</a> project. Currently, I am focusing on real-time, interactive, high-resolution video generation. At Google, I am fortunate to work under the supervision of <a href="https://sites.google.com/view/milanfarhome/">Peyman Milanfar</a>.</p>
               <p>
                 Prior to Google, I was training diffusion-autoregressive model <a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0?tab=readme-ov-file">Hunyuan-image 3.0</a> as a Research Scientist in Tencent.
               </p>
               <p>
-                My research lies in <b>Multimodal Generative AI</b>, especially in <b> image and Video Synthesis</b>. I am interested in building AI systems that can <b>simulate</b> our dynamic visual world for <b>creative control</b>, and bring real-time interactive experiences to human beings.
+                My research lies in <b>Multimodal Generative AI</b>, especially in <b> image and Video Synthesis</b>. I am interested in building AI systems that can <b>simulate</b> our dynamic visual world with <b>creative control</b>, and bring <b>real-time interactive</b> experiences to human beings.
               </p>
               <p>
                 I received my Ph.D. from the <a href="https://hkust.edu.hk/">Hong Kong University of Science and Technology</a>, supervised by Prof. <a href="http://cqf.io">Qifeng Chen</a>.
-                In 2020, I received my Bachelor's Degree in Automation from <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> with a National Scholarship from <a href="http://ckc.zju.edu.cn/ckcen/">Chu Kochen Honors College</a>.
+                In 2020, I received my Bachelor's Degree in Automation from <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> with a National Scholarship from <a href="http://ckc.zju.edu.cn/ckcen/">Chu Kochen Honors College</a>, supervised by Prof. <a href="https://scholar.google.com/citations?user=FCsdj0YAAAAJ">Wenyuan Xu</a>.
               </p>
               <i style="color: #eb002a"> Our team is recruiting talented interns on image and video generation!  <br>
                 Drop me an Email if you are interested in collaboration or internships! </i>
@@ -58,7 +58,7 @@
                   <p>
                   </p><ul>
                     <li>Feb 2026: Tea-adapter (video control) is accepted by CVPR 2026! See you in Denver!</li>
-                    <li>Feb 2026: Follow-Your-Motion (motion transfer) is accepted by ICLR 2026!</li>
+                    <li>Jan 2026: Follow-Your-Motion (motion transfer) is accepted by ICLR 2026!</li>
                     <li>Sep 2025: <a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0?tab=readme-ov-file">Hunyuan-image 3.0</a> is open-sourced.</li>
                     <li>Feb 2025: One paper about image editing and reasoning is accepted by CVPR 2025.</li>
                     <li>Oct 2024: I received my Ph.D. from HKUST!</li>
@@ -129,13 +129,26 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+      <tr onmouseout="cvpr2025_stop()" onmouseover="cvpr2025_start()">
           <td style="padding:20px;width:25%;vertical-align:bottom">
             <div class="one">
             <div class="two" id="cvpr2025_image" style="opacity: 0;">
-                <img src="images/cvpr2025_editing.png" width="230"></div>
+                <img src="images/cot_edit_framework.png" width="240"></div>
             <div class="two" id="cvpr2025_input" style="opacity: 1;">
-            <img src="images/cvpr2025_editing.png" width="230"></div>
+            <img src="images/cot_edit_result2.png" width="240"></div>
             </div>
+            <script type="text/javascript">
+              function cvpr2025_start() {
+                document.getElementById('cvpr2025_image').style.opacity = "1";
+                document.getElementById('cvpr2025_input').style.opacity = "0";
+              }
+
+              function cvpr2025_stop() {
+                document.getElementById('cvpr2025_image').style.opacity = "0";
+                document.getElementById('cvpr2025_input').style.opacity = "1";
+              }
+              cvpr2025_stop()
+            </script>
         </td>
 
         <td style="padding:20px;width:75%;vertical-align:middle">
@@ -155,6 +168,11 @@
             <br>
             <em>CVPR</em>, 2025
             <br>
+            <!-- <a> Details are coming soon</a> -->
+            <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Ji_Instruction-based_Image_Editing_with_Planning_Reasoning_and_Generation_ICCV_2025_paper.pdf">PDF</a>
+            <!-- <a href="https://github.com/ygtxr1997/CelebBasis">code</a> -->
+            <!-- <a href="https://chenyangqiqi.github.io/hyperthumbnail/index.html">project page</a> -->
+            <!-- <a href="">Coming Soon</a> -->
             <p></p>
         </td>
 
@@ -213,7 +231,7 @@
         </td>
 
 
-    <tr>
+    <!-- <tr>
         <td style="padding:20px;width:25%;vertical-align:bottom">
             <div class="one">
             <div class="two" id="neurips2024_image" style="opacity: 0;">
@@ -238,7 +256,7 @@
             <br>
             <p></p>
         </td>
-    </tr>
+    </tr> -->
 
     <tr onmouseout="fatezero_stop()" onmouseover="fatezero_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
